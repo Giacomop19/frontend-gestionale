@@ -8,6 +8,7 @@ import TextBox from '../../core/textField/textField';
 import { Component } from 'react';
 import axios from 'axios';
 import * as AppCostants from '../../helpers/AppCostants'
+import { Outlet, Link } from "react-router-dom";
 
 
 class Signup extends Component {
@@ -106,7 +107,11 @@ class Signup extends Component {
           <CardActions className="CardActions" >
             <Button style={{background:'black',color:'white'}} onClick={this.onSubmit}> SIGNUP</Button>
           </CardActions>
-      
+          <div>
+          <CardActions className="CardActions" >
+            <Link style={{background:'white',color:'black'}} to="/">Login</Link>
+          </CardActions>
+          </div>
         </Card>
         </div>
       );

@@ -9,6 +9,7 @@ import { Component } from 'react';
 import axios from 'axios';
 import * as AppCostants from '../../helpers/AppCostants'
 import { Navigate } from 'react-router-dom';
+import { Outlet, Link } from "react-router-dom";
 // import Button from '../../core/button/button';
 
 
@@ -81,12 +82,10 @@ class Login extends Component {
           </CardActions>
 
           <div>
-            <Button
-              size="medium"
-              onClick={<Navigate to="/Signup" />}
-              >Signup </Button>
+          <CardActions className="CardActions" >
+            <Link style={{background:'white',color:'black'}} to="/signup">SignUp</Link>
+          </CardActions>
           </div>
-      
         </Card>
         </div>
       );
